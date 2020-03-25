@@ -9,7 +9,8 @@ import { UpdateMemberDataComponent } from './update-member-data/update-member-da
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
+import {SocietyManagementService} from './society-management.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     SlimLoadingBarModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SocietyManagementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,10 @@
 <div class="card">
     <div class="card-body">
-      <form>
+      <form (ngSubmit)="addMembers(sMId.value , personName.value, flatNumber.value, fMemberName.value, mobileNumber.value, hContactNumber.value, role.value)"  [formGroup]="angForm">
         <div class="form-group">
             <div class="form-group">
                 <label class="col-md-4">Society Member Id </label>
-                <input type="text" class="form-control" formControlName="sMId" />
+                <input  type="text" class="form-control" placeholder="Society Member Id" name="sMId" formControlName="sMId" #sMId />
                 <div *ngIf="angForm.controls['sMId'].invalid && (angForm.controls['sMId'].dirty || angForm.controls['sMId'].touched)" class="alert alert-danger">
                   <div *ngIf="angForm.controls['sMId'].errors.required">
                     Society Member Id is required.
@@ -12,7 +12,7 @@
                 </div>
               </div>
           <label class="col-md-4">Person Name</label>
-          <input type="text" class="form-control" formControlName="personName" />
+          <input  type="text" class="form-control" placeholder="Person Name" name= "personName" formControlName="personName" #personName />
           <div *ngIf="angForm.controls['personName'].invalid && (angForm.controls['personName'].dirty || angForm.controls['personName'].touched)" class="alert alert-danger">
             <div *ngIf="angForm.controls['personName'].errors.required">
               Person Name is required.
@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
             <label class="col-md-4">Flat Number </label>
-            <input type="text" class="form-control" formControlName="flatNumber"/>
+            <input  type="text" class="form-control" placeholder="flatNumber" name="flatNumber"  formControlName="flatNumber" #flatNumber/>
             <div *ngIf="angForm.controls['flatNumber'].invalid && (angForm.controls['flatNumber'].dirty || angForm.controls['flatNumber'].touched)" class="alert alert-danger">
               <div *ngIf="angForm.controls['flatNumber'].errors.required">
                 flat Number is required.
@@ -30,12 +30,12 @@
           </div>
           <div class="form-group">
             <label class="col-md-4">Other Family Member Name</label>
-            <input type="text" class="form-control" formControlName="fMemberName"/>
+            <input   type="text" class="form-control" placeholder="Family Member Name" name= "fMemberName"  formControlName="fMemberName" #fMemberName/>
             
           </div>
           <div class="form-group">
             <label class="col-md-4">Mobile Number</label>
-            <input type="text" class="form-control" formControlName="mobileNumber" />
+            <input  type="text" class="form-control" placeholder="mobileNumber" name= "mobileNumber"  formControlName="mobileNumber" #mobileNumber />
             <div *ngIf="angForm.controls['mobileNumber'].invalid && (angForm.controls['mobileNumber'].dirty || angForm.controls['mobileNumber'].touched)" class="alert alert-danger">
               <div *ngIf="angForm.controls['mobileNumber'].errors.required">
                 Mobile Number is required.
@@ -44,11 +44,11 @@
           </div>
           <div class="form-group">
             <label class="col-md-4">Home Contact Number</label>
-            <input type="text" class="form-control" formControlName="hContactNumber"/>
+            <input    type="text" class="form-control" placeholder="hContactNumber" name= "hContactNumber"  formControlName="hContactNumber" #hContactNumber/>
           </div>
         <div class="form-group">
           <label class="col-md-4">Role ( like Secretary, Joint Secretary, Residential etc.)</label>
-          <input type="text" class="form-control" formControlName="role"/>
+          <input  type="text" class="form-control" placeholder="Role" name="role"  formControlName="role" #role/>
           <div *ngIf="angForm.controls['role'].invalid && (angForm.controls['role'].dirty || angForm.controls['role'].touched)" class="alert alert-danger">
             <div *ngIf="angForm.controls['role'].errors.required">
               Role is required.
@@ -57,10 +57,11 @@
         </div>
         <div class="form-group">
           <label class="col-md-4">Total Members in Flat</label>
-          <input type="text" class="form-control" formControlName="totalMembers"/>
+          <input type="text" class="form-control" placeholder="totalMembers" name= "totalMembers"  formControlName="totalMembers"/>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary">Add Details </button>
+          <button (click)="addMembers(sMId.value , personName.value, flatNumber.value, fMemberName.value, mobileNumber.value, hContactNumber.value, role.value )" 
+           class="btn btn-primary">Add Details </button>
         </div>
       </form>
     </div>
