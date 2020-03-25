@@ -31,14 +31,15 @@ routes.route('/addMember')
 });
 
 
-routes.route('/getMember/:id')
+routes.route('/getMember')
 .get((req, res) => {
   console.log(4);
-  
-  let id = req.params.id;
-  memberModel.findById(id, function (err, memberData){
+   
+  memberModel.find({}).then((memberData)=>{
       res.json(memberData);
-  });
+  }).catch(err =>{
+    res.status(400).send('Some Error occured ! Try Later :) ');
+  })
 })
 
 routes

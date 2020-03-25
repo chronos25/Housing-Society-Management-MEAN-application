@@ -14,7 +14,7 @@ const routes: Routes = [
     component: AddmembersDataComponent
   },
   {
-    path:'society/getMember/:MemId',
+    path:'society/getMember',
     component:GetmembersDataComponent
   },
   {

@@ -24,4 +24,9 @@ export class SocietyManagementService {
       console.log('Post Request Done');
     });
   }
+
+  getMember(){
+    return this.http.get(`${this.url}/getMember`);
+  }
+
 }
