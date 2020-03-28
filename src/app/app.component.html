@@ -4,17 +4,38 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a routerLink="society/dashboard" class="nav-link" routerLinkActive="active">
-          Housing Society Management 
-        </a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="society/addMember" class="nav-link" routerLinkActive="active">
-           Add Members
+          <h2>Housing Society Management </h2>
         </a>
       </li> 
     </ul>
   </div>
 </nav>
+<div class="sidebar">
+  <ul>
+    <li><a routerLink="society/getMember" class="nav-link" routerLinkActive="active">
+  <i class="fa fa-server"></i><span>Members</span></a></li>
+    <li>
+      <a routerLink="society/addMember" class="nav-link" routerLinkActive="active">
+      <i class="fa fa-server"></i><span>Add Member</span></a>
+  </li>
+    <li>
+      <a routerLink="complaint/addComplaint" class="nav-link" routerLinkActive="active">
+      <i class="fa fa-server"></i><span>Add Complaints</span></a>
+      </li>
+      <li>
+        <a routerLink="complaint/viewComplaints" class="nav-link" routerLinkActive="active">
+          <i class="fa fa-table"></i><span>View Complaints</span></a>
+      </li>
+    <li>
+      <a routerLink="bill/addBill" class="nav-link" routerLinkActive="active">
+        <i class="fa fa-table"></i><span>Add Bills</span></a>
+    </li>
+    <li>
+      <a routerLink="bill/viewBills" class="nav-link" routerLinkActive="active">
+        <i class="fa fa-table"></i><span>View Bills</span></a>
+    </li>
+  </ul>
+</div>
 <div class="container">
   <router-outlet></router-outlet>
 </div>

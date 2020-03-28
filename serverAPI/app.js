@@ -4,7 +4,8 @@ const express = require('express'),
  logger = require('morgan');
  cors= require('cors'),
  memberRoutes = require('./routes/memberRoutes'),
- usersRouter = require('./routes/users'),
+ complaintRouter = require('./routes/complaintRoute'),
+ billRouter = require('./routes/billRouter'),
  url = 'mongodb://localhost:27017/society',
  mongoose = require('mongoose');
 
@@ -28,6 +29,7 @@ const options = {
   });
 
 app.use('/society', memberRoutes);
-app.use('/users', usersRouter);
+app.use('/complaint', complaintRouter);
+app.use('/bill',billRouter);
 
 module.exports = app;
