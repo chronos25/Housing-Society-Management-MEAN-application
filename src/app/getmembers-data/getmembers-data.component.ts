@@ -17,7 +17,6 @@ export class GetmembersDataComponent implements OnInit {
       console.log("data"+ data);
       this.member = data;
       console.log(this.member);
-      
     });
   }
 

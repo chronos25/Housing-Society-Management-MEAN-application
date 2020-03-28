@@ -1,0 +1,17 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>Soc. Member Id</td>
+        <td>Electric Bills</td>
+        <td>Management Bills</td> 
+    </tr>
+    </thead>
+  
+    <tbody>
+        <tr *ngFor="let bill of bills">
+            <td>{{ bill.societyMemberId }}</td>
+            <td>{{ bill.electric }}</td>
+            <td>{{ bill.management }}</td>
+         </tr>
+    </tbody>
+  </table>

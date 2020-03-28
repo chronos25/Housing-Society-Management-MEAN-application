@@ -1,0 +1,17 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <td>Soc. Member Id</td>
+        <td>Subject</td>
+        <td>Complaint</td> 
+    </tr>
+    </thead>
+  
+    <tbody>
+        <tr *ngFor="let Complaint of complaints">
+            <td>{{ Complaint.societyMemberId }}</td>
+            <td>{{ Complaint.subject }}</td>
+            <td>{{ Complaint.complaintBody }}</td>
+         </tr>
+    </tbody>
+  </table>
